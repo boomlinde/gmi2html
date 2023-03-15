@@ -121,6 +121,10 @@ func main() {
 
 		lastLine = l
 	}
+	if paragraph {
+		paragraph = false
+		w("</p>\n")
+	}
 
 	var title = "Untitled document"
 	if len(lines) > 0 && lines[0].Type == gemini.H1Line {
