@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
+<title>{{ .Title }}</title>
+<style>
+body { background-color: #fec; display: flex; justify-content: center; }
+p, li, div { font-family: sans-serif; }
+pre { padding: 0.5em; background: #dca; display: block; width: fit-content; min-width: 100%; }
+h1, h2, h3 { font-weight: bold; font-family: monospace; color: black; }
+blockquote { font-style: italic; }
+ul.linklist { padding-left: 0; padding-right: 0; }
+ul.linklist li { list-style: none;  }
+ul.linklist li:before { content: "⇨ "; }
+.content { max-width: 40em; }
+
+@media (prefers-color-scheme: dark) {
+	body { background-color: #ffe; color: #331; }
+	html { filter: invert(100%) }
+	img { filter: invert(100%); }
+}
+</style>
+</head>
+<body>
+<div class="content">
+{{ .Content }}
+</div>
+</body>
+</html>
